@@ -4,8 +4,6 @@ import User from './User'
 
 class Leaderboard extends Component {
     render() {
-        //debugger
-        console.log('Leaders: ', this.props.authorID)
         return (
             <div>
             <h3>Leaderboard</h3>
@@ -18,8 +16,6 @@ class Leaderboard extends Component {
 }
 
 function mapStateToProps ({ users }) {
-    //const score = Object.keys(users[0].answers).length//+ users.questions.length
-    //debugger
     return {
         authorID: Object.keys(users).sort((a,b) => users[b].score - users[a].score)
     }
